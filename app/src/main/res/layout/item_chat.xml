@@ -28,6 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/user_name_bottom_margin"
+            android:layout_marginStart="@dimen/user_name_left_margin"
             android:textColor="@color/chat_text"
             android:textSize="@dimen/chat_user_name"
             tools:text="Drew" />

@@ -65,10 +65,21 @@ public class LoginActivity extends AppCompatActivity {
         final EditText password = findViewById(R.id.loginPassword);
         Button login = findViewById(R.id.loginButton);
 
+        /* When we click the login button, we should hit the API endpoint with the credentials
+        *  entered in the edit text. A 401 error code is being returned, and upon inspection of the
+        *  HTTPLoggingInterceptor logs it is saying there is an invalid user name or password even though
+        *  the credentials mentioned below are used. So for now, showAlertDialog() is called which brings us back to the
+        *  main activity if "OK" is chosen in the alert window.*/
+
+        /***************************************************************************
+         * PLEASE SEE ProjectBreakdown.txt for the HTTPLoggingInterceptor logs     *
+         ***************************************************************************/
+
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!(TextUtils.isEmpty(email.getText().toString().trim())) && !(TextUtils.isEmpty(password.getText().toString().trim()))) {
+                showAlertDialog();
+                /*if (!(TextUtils.isEmpty(email.getText().toString().trim())) && !(TextUtils.isEmpty(password.getText().toString().trim()))) {
                     Log.d("email", email.getText().toString());
                     Log.d("password", password.getText().toString());
                     loginViewModel.getPostData(email.getText().toString().trim(), password.getText().toString().trim());
@@ -76,7 +87,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this,
                             "Either both or one field is empty, please enter the necessary information for each field",
                             Toast.LENGTH_LONG).show();
-                }
+                }*/
             }
         });
 
@@ -111,10 +122,10 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void showAlertDialog() {
-        Log.d("alertDialog", "Currently in showAlertDialog");
-        /*postObject = new Post();
-        postObject.setMessage("message");
-        postObject.setCode(400); */
+        //Log.d("alertDialog", "Currently in showAlertDialog");
+        postObject = new Post();
+        postObject.setMessage("Message");
+        postObject.setCode(200);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(postObject.getCode() + "\n" + postObject.getMessage())
                 .setTitle("Response")

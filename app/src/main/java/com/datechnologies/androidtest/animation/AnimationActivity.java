@@ -2,24 +2,18 @@ package com.datechnologies.androidtest.animation;
 
 import android.annotation.SuppressLint;
 import android.content.ClipData;
-import android.content.ClipDescription;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.DragEvent;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -62,7 +56,6 @@ public class AnimationActivity extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setDisplayShowHomeEnabled(true);
 
-
         final ImageView logo = findViewById(R.id.animationLogo);
         Button fadeInButton = findViewById(R.id.fadeIn);
 
@@ -78,9 +71,9 @@ public class AnimationActivity extends AppCompatActivity {
         animationSet.addAnimation(fadeOut);
         animationSet.addAnimation(fadeIn);*/
 
-        // The listener for the "Fade in" button found in the activity is below. OnClick
+        // The listener for the "Fade in" button, found in the activity, is below. OnClick
         // of the button we start the fade out animation. The fade in and fade out animations
-        // are found above. A listener for thr fade out animation is also set so when that completes
+        // are found above. A listener for the fade out animation is also set so when that completes
         // we can start the fade in animation
         fadeInButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,6 +97,7 @@ public class AnimationActivity extends AppCompatActivity {
             }
         });
 
+        // Touch listener for the image view
         logo.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -125,12 +119,11 @@ public class AnimationActivity extends AppCompatActivity {
             }
         });
 
-
+        // Since the relative layout will be accepting the drop, we need to set a drag listener for it
         findViewById(R.id.relativeLayout).setOnDragListener(new View.OnDragListener() {
             @Override
             public boolean onDrag(View v, DragEvent event) {
-                int eventType = event.getAction();
-                switch (eventType) {
+                switch (event.getAction()) {
                     case DragEvent.ACTION_DRAG_STARTED:
                         return true;
 

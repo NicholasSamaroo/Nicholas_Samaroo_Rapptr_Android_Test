@@ -1,17 +1,15 @@
 package com.datechnologies.androidtest.chat;
 
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.datechnologies.androidtest.R;
 import com.datechnologies.androidtest.POJOs.ChatLogMessageModel;
+import com.datechnologies.androidtest.R;
 import com.squareup.picasso.Picasso;
 
 import org.jetbrains.annotations.NotNull;

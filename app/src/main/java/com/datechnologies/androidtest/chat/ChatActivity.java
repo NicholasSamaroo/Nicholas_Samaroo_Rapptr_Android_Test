@@ -55,7 +55,6 @@ public class ChatActivity extends AppCompatActivity {
         actionBar.setDisplayShowHomeEnabled(true);
 
         instantiateRecyclerView();
-
         /*
             Followed a MVVM / separation of concerns style. So we initialize our
             ViewModel here and then in the following function call we set up our observer.

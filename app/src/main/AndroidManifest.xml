@@ -14,8 +14,8 @@
 
         <activity
             android:name=".MainActivity"
-            android:theme="@style/splashScreenTheme"
-            android:label="@string/activity_main_title">
+            android:label="@string/activity_main_title"
+            android:theme="@style/splashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,15 +25,39 @@
 
         <activity
             android:name=".chat.ChatActivity"
-            android:label="@string/chat_activity_title" />
+            android:label="@string/chat_activity_title"
+            android:parentActivityName=".MainActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+
+        </activity>
 
         <activity
             android:name=".animation.AnimationActivity"
-            android:label="@string/animation_activity_title" />
+            android:label="@string/animation_activity_title"
+            android:parentActivityName=".MainActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+
+        </activity>
 
         <activity
             android:name=".login.LoginActivity"
-            android:label="@string/login_activity_title" />
+            android:label="@string/login_activity_title"
+            android:parentActivityName=".MainActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+
+        </activity>
 
     </application>
 

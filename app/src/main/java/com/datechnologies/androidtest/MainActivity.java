@@ -18,15 +18,14 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // I set the theme for this activity in the manifest, and then also set this line here
-        // so we can get the splash screen on app launch
+        // The theme for the activity is set in the manifest
+        // We also need this line so we can see the splash screen before app launch
         setTheme(R.style.splashScreenTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         ActionBar actionBar = getSupportActionBar();
         assert actionBar != null;
-        actionBar.setTitle(R.string.activity_main_title);
 
         /*
          * =========================================================================================
@@ -48,11 +47,6 @@ public class MainActivity extends AppCompatActivity {
 
         // TODO: Make the UI look like it does in the mock-up
         // TODO: Add a ripple effect when the buttons are clicked
-
-        /*
-         * PLEASE SEE THE README.MD FILE ADDED WITH THIS PROJECT TO SEE
-         * MY PROJECT BREAKDOWN
-         */
     }
 
     //==============================================================================================
