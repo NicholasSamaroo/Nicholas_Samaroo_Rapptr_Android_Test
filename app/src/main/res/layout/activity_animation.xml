@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.datechnologies.androidtest.animation.AnimationActivity">
+
+    <ImageView
+        android:id="@+id/animationLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/animation_image_margin_left"
+        android:layout_marginTop="@dimen/animation_image_margin_top"
+        android:layout_marginEnd="@dimen/animation_image_margin_right"
+        android:src="@drawable/gpc_logo" />
+
+    <Button
+        android:id="@+id/fadeIn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/animation_button_margin"
+        android:layout_marginRight="@dimen/animation_button_margin"
+        android:layout_marginBottom="@dimen/animation_button_margin"
+        android:background="@color/button_blue"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="@string/fade_in_animation_button"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/button_text_size" />
+
+</RelativeLayout>

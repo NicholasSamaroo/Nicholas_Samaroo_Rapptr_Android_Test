@@ -1,0 +1,42 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Text Sizes -->
+    <dimen name="button_text_size">16sp</dimen>
+
+    <dimen name="button_height">55dp</dimen>
+
+    <!-- activity_main.xml dimensions -->
+    <dimen name="main_activity_left_right_bubble_spacing">30dp</dimen>
+    <dimen name="main_bubble_height">55dp</dimen>
+    <dimen name="main_bubble_bottom_margin">24dp</dimen>
+    <dimen name="main_vectorImage_Spacing">22dp</dimen>
+    <dimen name="main_activity_textView_Spacing">16dp</dimen>
+
+    <!-- item_chat.xml dimensions -->
+    <dimen name="chat_user_name">13sp</dimen>
+    <dimen name="user_name_bottom_margin">4dp</dimen>
+    <dimen name="chat_message">15sp</dimen>
+    <dimen name="view_group_right_margin">21dp</dimen>
+    <dimen name="view_group_top_margin">16dp</dimen>
+    <dimen name="avatar_left_margin">16dp</dimen>
+    <dimen name="avatar_right_margin">7dp</dimen>
+
+    <!-- activity_login.xml dimensions -->
+    <dimen name="input_field_text_size">16sp</dimen>
+    <dimen name="credential_container_margin_top">16dp</dimen>
+    <dimen name="login_edit_text_horizontal_margins">30dp</dimen>
+    <dimen name="email_edit_text_margin_top">24dp</dimen>
+    <dimen name="email_edit_text_margin_bottom">16dp</dimen>
+    <dimen name="login_button_margin_left">25dp</dimen>
+    <dimen name="login_button_margin_right">26dp</dimen>
+    <dimen name="login_button_vertical_margins">24dp</dimen>
+
+    <!-- activity_animation.xml dimensions -->
+    <dimen name="animation_image_margin_top">100dp</dimen>
+    <dimen name="animation_image_margin_left">23dp</dimen>
+    <dimen name="animation_image_margin_right">22dp</dimen>
+    <dimen name="animation_button_margin">30dp</dimen>
+</resources>

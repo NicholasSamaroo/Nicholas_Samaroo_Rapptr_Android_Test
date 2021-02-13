@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">AndroidTest</string>
+
+    <!-- Activity titles -->
+    <string name="activity_main_title">Coding Tasks</string>
+    <string name="chat_activity_title">Chat</string>
+    <string name="animation_activity_title">Animation</string>
+    <string name="login_activity_title">Login</string>
+
+    <!-- activity_main.xml button text -->
+    <string name="chat_button">CHAT</string>
+    <string name="login_button">LOGIN</string>
+    <string name="animation_button">ANIMATION</string>
+
+    <!-- activity_login.xml edit text hint text -->
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+
+    <!-- activity_animation.xml button text -->
+    <string name="fade_in_animation_button">FADE IN</string>
+
+</resources>

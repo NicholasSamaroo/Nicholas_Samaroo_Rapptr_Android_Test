@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/view_group_top_margin"
+    android:layout_marginEnd="@dimen/view_group_right_margin"
+    android:orientation="horizontal"
+    tools:background="@color/background"
+    tools:ignore="UseCompoundDrawables">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/avatarImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/avatar_left_margin"
+        android:layout_marginEnd="@dimen/avatar_right_margin"
+        app:shapeAppearanceOverlay="@style/roundedImageView" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/chatUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/user_name_bottom_margin"
+            android:textColor="@color/chat_text"
+            android:textSize="@dimen/chat_user_name"
+            tools:text="Drew" />
+
+        <TextView
+            android:id="@+id/messageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/chat_bubble_background"
+            android:textColor="@color/chat_text"
+            android:textSize="@dimen/chat_message"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pharetra, sapien at luctus semper, justo dui accumsan lorem, nec pretium dui eros pharetra leo." />
+
+    </LinearLayout>
+
+</LinearLayout>
