@@ -62,7 +62,7 @@ public class Repository {
         });
     }
 
-    public LiveData<List<ChatLogMessageModel>> getChatBubbleData() {
+    public MutableLiveData<List<ChatLogMessageModel>> getChatBubbleData() {
         return chatBubbleData;
     }
 

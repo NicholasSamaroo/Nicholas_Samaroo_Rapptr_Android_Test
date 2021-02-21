@@ -3,10 +3,12 @@ package com.datechnologies.androidtest.chat;
 import android.content.Context;
 import android.content.Intent;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
@@ -29,7 +31,6 @@ public class ChatActivity extends AppCompatActivity {
     //==============================================================================================
 
     private ChatAdapter chatAdapter;
-    private List<ChatLogMessageModel> chatData;
     private ChatViewModel chatViewModel;
 
     //==============================================================================================
@@ -63,7 +64,7 @@ public class ChatActivity extends AppCompatActivity {
          */
         chatViewModel = new ViewModelProvider(this).get(ChatViewModel.class);
         setObserver();
-        fetchData();
+        //fetchData();
 
         // TODO: Make the UI look like it does in the mock-up. Allow for horizontal screen rotation.
 
@@ -83,25 +84,24 @@ public class ChatActivity extends AppCompatActivity {
         chatViewModel.getChatData().observe(this, new Observer<List<ChatLogMessageModel>>() {
             @Override
             public void onChanged(List<ChatLogMessageModel> chatLogMessageModels) {
-                chatData = chatLogMessageModels;
-                updateRecyclerView();
+                Log.d("onChanged", "onChangedCalled");
+                chatAdapter.setChatLogMessageModelList(chatLogMessageModels);
             }
         });
     }
 
-    private void fetchData() {
+    /*private void fetchData() {
+        Log.d("fetch", "getting data");
         chatViewModel.getData();
     }
 
     private void updateRecyclerView() {
+        Log.d("updaterecycler", "called");
         // Does not load image unless the protocol is https vs. being http
         // So we loop through our fetched data and change this before we set it as our list
         // Compared to doing it on onBindViewHolder which seems wasteful
-        for (ChatLogMessageModel i : chatData) {
-            i.setAvatar_url(i.getAvatar_url().replace("http", "https"));
-        }
         chatAdapter.setChatLogMessageModelList(chatData);
-    }
+    }*/
 
     @Override
     public void onBackPressed() {
